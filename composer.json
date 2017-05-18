@@ -1,0 +1,37 @@
+{
+    "name": "aside/requirements-checker",
+    "description": "Intuitive library for checking PHP requirements for your projects",
+    "version": "0.1.0",
+    "keywords": ["php", "requirements", "checker"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Simon Deeley",
+            "email": "s.deeley@icloud.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/simondeeley/requirements-checker/issues",
+        "source": "https://github.com/simondeeley/requirements-checker",
+        "docs": "https://github.com/simondeeley/requirements-checker"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aside\\RequirementsChecker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aside\\RequirementsChecker\\Test\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit --testdox tests"
+    }
+}
