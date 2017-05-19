@@ -9,6 +9,6 @@
  * file that was distributed with this source code.
  */
 
-namespace Aside\RequirementsChecker\Exception;
+namespace Insider\RequirementsChecker\Exception;
 
 class RequirementException extends \Exception {}

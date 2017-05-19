@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Aside\RequirementsChecker\Tests;
+namespace Insider\RequirementsChecker\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Aside\RequirementsChecker\VersionRequirement;
-use Aside\RequirementsChecker\Exception\RequirementException;
+use Insider\RequirementsChecker\VersionRequirement;
+use Insider\RequirementsChecker\Exception\RequirementException;
 
 final class VersionRequirementTest extends TestCase
 {
@@ -27,7 +27,7 @@ final class VersionRequirementTest extends TestCase
     {
         $requirement = new VersionRequirement($semver);
         
-        $this->assertInstanceOf('Aside\RequirementsChecker\VersionRequirement', $requirement);
+        $this->assertInstanceOf('Insider\RequirementsChecker\VersionRequirement', $requirement);
     }
     
     /**
@@ -53,7 +53,7 @@ final class VersionRequirementTest extends TestCase
     {
         $requirement = new VersionRequirement(PHP_VERSION, $operand);
         
-        $this->assertInstanceOf('Aside\RequirementsChecker\VersionRequirement', $requirement);
+        $this->assertInstanceOf('Insider\RequirementsChecker\VersionRequirement', $requirement);
     }
     
     /**
@@ -77,7 +77,7 @@ final class VersionRequirementTest extends TestCase
      */
     final public function testShouldThrowExceptionIfRequirementIsNotMet($requirement, $operand, $exception)
     {
-        $this->expectException('Aside\RequirementsChecker\Exception\RequirementException');
+        $this->expectException('Insider\RequirementsChecker\Exception\RequirementException');
         $this->expectExceptionMessage($exception);
         
         $requirement = new VersionRequirement($requirement, $operand);
@@ -123,7 +123,7 @@ final class VersionRequirementTest extends TestCase
             )
         );
         
-        $this->expectException('Aside\RequirementsChecker\Exception\RequirementException');
+        $this->expectException('Insider\RequirementsChecker\Exception\RequirementException');
         $this->expectExceptionMessage('Maximum required PHP version 5.2.0 is greater than the current version '. PHP_VERSION);
         
         $requirement_parent->check();        
