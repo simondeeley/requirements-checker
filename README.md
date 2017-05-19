@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/simondeeley/requirements-checker.svg?branch=master)](https://travis-ci.org/simondeeley/requirements-checker)
 
-**Library for assessing PHP runtime requirements.**
+#### Library for assessing PHP runtime requirements.
 
 It provides an intuitive and simply API for checking system requirements at runtime for any PHP script integrating this library. At the moment it supports PHP version and loaded extensions. There are plans to add more checks in the pipeline!
 
@@ -21,15 +21,15 @@ It provides an intuitive and simply API for checking system requirements at runt
 ## Usage
 
 
-##### Check that the a minimum PHP version is available
-```ph#p
+Check that the a minimum PHP version is available
+```php
 use Insider\RequirementsChecker\VersionRequirement;
 
 $requirement = new VersionRequirement('5.6.2');
 $requirement->check();
 ```
     
-##### Check that an extension is loaded
+Check that an extension is loaded
 ```php
 use Insider\RequirementsChecker\ExtensionRequirement;
 
@@ -37,7 +37,7 @@ $requirement = new ExtensionRequirement('mcrypt');
 $requirement->check();
 ```
     
-##### Ensure that the maximum PHP version running is 5.6.7, for example
+Ensure that the maximum PHP version running is 5.6.7, for example
 ```php
 use Insider\RequirementsChecker\VersionRequirement;
 
@@ -47,7 +47,7 @@ $requirement->check();
 
 In fact, you can use any constraint with a `VersionRequirement` such as `lt`, `==`, `>`, `!=` etc. This brings us onto the next subject..
 
-##### Chaining requirements
+Chaining requirements
 ```php
 use Insider\RequirementsChecker\VersionRequirement;
 
@@ -57,7 +57,7 @@ $maxRequirement = new VersionRequirement('5.6.7', '<');
 $minRequirement->add($maxRequirement)->check();
 ```
 
-##### You can go mad and chain any number of requirements!
+You can go mad and chain any number of requirements!
 ```php
 use Insider\RequirementsChecker\ExtensionRequirement;
 use Insider\RequirementsChecker\VersionRequirement;
