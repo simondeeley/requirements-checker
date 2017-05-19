@@ -1,5 +1,5 @@
 {
-    "name": "aside/requirements-checker",
+    "name": "insider/requirements-checker",
     "description": "Intuitive library for checking PHP requirements for your projects",
     "version": "0.1.0",
     "keywords": ["php", "requirements", "checker"],
@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Aside\\RequirementsChecker\\": "src/"
+            "Insider\\RequirementsChecker\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aside\\RequirementsChecker\\Test\\": "tests/"
+            "Insider\\RequirementsChecker\\Test\\": "tests/"
         }
     },
     "minimum-stability": "dev",

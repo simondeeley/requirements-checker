@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Aside\RequirementsChecker;
+namespace Insider\RequirementsChecker;
 
 final class VersionRequirement extends Requirement
 {

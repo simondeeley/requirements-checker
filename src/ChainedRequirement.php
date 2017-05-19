@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Aside\RequirementsChecker;
+namespace Insider\RequirementsChecker;
 
-use Aside\RequirementsChecker\Exception\RequirementException;
+use Insider\RequirementsChecker\Exception\RequirementException;
 
 trait ChainedRequirement
 {
