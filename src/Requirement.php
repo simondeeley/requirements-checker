@@ -16,7 +16,7 @@ namespace Insider\RequirementsChecker;
  *
  * @author  Simon Deeley <s.deeley@icloud.com>
  */
-abstract class Requirement
+abstract class Requirement implements Checker
 {
     use ChainedRequirement;
         
