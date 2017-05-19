@@ -31,6 +31,9 @@
         "sort-packages": true
     },
     "prefer-stable": true,
+    "require": {
+        "php": ">=5.3"
+    },
     "scripts": {
         "test": "phpunit --testdox tests"
     }
