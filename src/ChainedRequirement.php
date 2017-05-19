@@ -55,7 +55,7 @@ trait ChainedRequirement
      * @param   Requirement $requirement
      * @return  self
      */
-    final public function add(Requirement $requirement)
+    final public function add(Checker $requirement)
     {
         $this->requirements[] = $requirement;
         

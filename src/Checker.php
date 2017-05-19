@@ -12,19 +12,20 @@
 namespace Insider\RequirementsChecker;
 
 /**
- * Requirement
+ * Checker
+ *
+ * Interface that any class that checks requirements should inherit from. It
+ * provides only one public method check() which should return bool true if
+ * all requirements are met.
  *
  * @author  Simon Deeley <s.deeley@icloud.com>
  */
-abstract class Requirement implements Checker
+interface Checker
 {
-    use ChainedRequirement;
-        
     /**
-     * Evaluate the requirement
+     * Check requirement
      *
-     * @return  bool    Should returns true on success, false if a 
-     *                  requirement is not met
+     * @return	bool;
      */
-    abstract protected function evaluate();
+    public function check();
 }
