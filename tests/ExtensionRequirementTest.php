@@ -12,7 +12,7 @@
 namespace Insider\RequirementsChecker\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Insider\RequirementsChecker\ExtensionRequirement;
+use Insider\RequirementsChecker\Requirement\ExtensionRequirement;
 
 /**
  * Unit tests for ExtensionRequirement
@@ -33,7 +33,7 @@ final class ExtensionRequirementTest extends TestCase
     {
         $requirement = new ExtensionRequirement($extension);
         
-        $this->assertInstanceOf('Insider\RequirementsChecker\ExtensionRequirement', $requirement);
+        $this->assertInstanceOf('Insider\RequirementsChecker\Requirement\ExtensionRequirement', $requirement);
     }
     
     /**
