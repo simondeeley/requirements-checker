@@ -1,0 +1,32 @@
+<?php
+
+/*
+ * This file is part of the Requirements Checker library.
+ *
+ * © Simon Deeley <s.deeley@icloud.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Insider\RequirementsChecker\Requirement;
+
+use Insider\RequirementsChecker\Checker;
+
+/**
+ * Base class from which to extend requirements
+ *
+ * @author  Simon Deeley <s.deeley@icloud.com>
+ */
+abstract class Requirement implements Checker
+{
+    use ChainedRequirement;
+        
+    /**
+     * Evaluate the requirement
+     *
+     * @return  bool    Should returns true on success, false if a 
+     *                  requirement is not met
+     */
+    abstract protected function evaluate();
+}
