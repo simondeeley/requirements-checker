@@ -12,7 +12,7 @@
 namespace Insider\RequirementsChecker\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Insider\RequirementsChecker\VersionRequirement;
+use Insider\RequirementsChecker\Requirement\VersionRequirement;
 use Insider\RequirementsChecker\Exception\RequirementException;
 
 final class VersionRequirementTest extends TestCase
@@ -27,7 +27,7 @@ final class VersionRequirementTest extends TestCase
     {
         $requirement = new VersionRequirement($semver);
         
-        $this->assertInstanceOf('Insider\RequirementsChecker\VersionRequirement', $requirement);
+        $this->assertInstanceOf('Insider\RequirementsChecker\Requirement\VersionRequirement', $requirement);
     }
     
     /**
@@ -53,7 +53,7 @@ final class VersionRequirementTest extends TestCase
     {
         $requirement = new VersionRequirement(PHP_VERSION, $operand);
         
-        $this->assertInstanceOf('Insider\RequirementsChecker\VersionRequirement', $requirement);
+        $this->assertInstanceOf('Insider\RequirementsChecker\Requirement\VersionRequirement', $requirement);
     }
     
     /**
